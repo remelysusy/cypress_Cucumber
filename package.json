@@ -1,0 +1,24 @@
+{
+  "name": "cypress-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.4.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.0"
+  },
+  "scripts": {
+    "test:chrome": "cypress run --browser chrome --no-exit",
+    "test:firefox": "cypress run --browser firefox --no-exit",
+    "test:edge": "cypress run --browser edge --no-exit",
+    "test:all": "npm run test:chrome && npm run test:firefox && npm run test:edge"
+  },
+  "cypress-cucumber-preprocessor":{
+    "step_definitions": "cypress/support/steps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
